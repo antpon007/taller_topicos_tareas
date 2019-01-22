@@ -1,29 +1,33 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const api = require('./api/v1');
 
 const app = express();
 
-app.get('/', (req, res, next) => {
-    res.json({
-        message: 'Welcome to the API- stacks',
-    });
-});
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 
-// No route found handler
+// parse application/json
+app.use(bodyParser.json());
+
+app.use('/', api);
+app.use('/api', api);
+app.use('/api/v1', api);
+
 app.use((req, res, next) => {
     res.status(404);
     res.json({
-        message: 'Error. Route not found'
+        message: 'Resource not found',
     });
 });
 
-// Error handler
-app.use((err, req, res, next) => {
+app.use((error, req, res, next) => {
     const {
-        statusCode = 500,
-            message,
-    } = err;
-
-    res.status(statusCode);
+        message = 'Server Error'
+    } = error;
+    res.status(500);
     res.json({
         message,
     });
