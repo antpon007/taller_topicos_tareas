@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const stacks = require('./stacks/routes');
+const tasks = require('./tasks/routes');
 
-router.use('/stacks', stacks);
+router.use('/', tasks);
 
 module.exports = router;

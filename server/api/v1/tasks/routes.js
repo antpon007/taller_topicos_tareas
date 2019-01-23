@@ -10,6 +10,6 @@ router
     .route('/:id')
     .get(controller.read)
     .put(controller.update)
-    .delete(controller.update);
+    .delete(controller.delete);
 
 module.exports = router;
