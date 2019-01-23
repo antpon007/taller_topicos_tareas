@@ -86,8 +86,7 @@ function deleteTask(id) {
     var i;
     for (i = 0; i < data.length; ++i) {
         if (data[i].id == id) {
-            delete data[i];
-            //data.splice[i, 1];
+            data.splice(i, 1);
             break;
         }
     }
