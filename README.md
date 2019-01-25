@@ -15,3 +15,5 @@ Pasos para hacer uso de la API:
 3. npm run dev o npm start.
 
 **nota:** *Tener en cuenta que este proyecto fue realizado con nodejs v. 10 (Instalarlo si aun no lo tiene)*
+
+Esta API cumple con lo lineamientos del contrato REST, para hacer uso de los metodos GET, POST, PUSH, DELETE, se utiliza como origen localhost:3000/
