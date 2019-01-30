@@ -2,7 +2,7 @@ const router = require('express').Router();
 const tasks = require('./tasks/routes');
 const user = require('./user/routes');
 
-router.use('/api/tasks/', tasks);
-router.use('/api/user/', user);
+router.use('/tasks', tasks);
+router.use('/user', user);
 
 module.exports = router;

@@ -13,7 +13,7 @@ const fields = {
 };
 
 const references = {
-  author: {
+  userId: {
     type: Schema.Types.ObjectId,
     ref: 'user',
     required: true,
