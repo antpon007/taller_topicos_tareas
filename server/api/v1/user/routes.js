@@ -6,7 +6,7 @@ router.param('id', controller.id);
 
 router
   .route('/')
-  .post(controller.create)
+  .post(controller.signup)
   .get(controller.all);
 
 router
