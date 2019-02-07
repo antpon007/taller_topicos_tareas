@@ -10,6 +10,11 @@ const fields = {
     default: '',
     trim: true,
   },
+  finished: {
+    type: Boolean,
+    default: false,
+    trim: true,
+  },
 };
 
 const references = {
